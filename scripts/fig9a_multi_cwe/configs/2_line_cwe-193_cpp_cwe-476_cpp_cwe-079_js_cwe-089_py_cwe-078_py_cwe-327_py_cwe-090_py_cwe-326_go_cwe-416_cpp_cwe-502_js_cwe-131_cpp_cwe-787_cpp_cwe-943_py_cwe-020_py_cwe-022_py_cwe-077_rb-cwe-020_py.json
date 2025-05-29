@@ -1,0 +1,27 @@
+{
+    "multi_cwe": [
+        "2_line_cwe-193_cpp_cwe-476_cpp_cwe-079_js_cwe-089_py_cwe-078_py_cwe-327_py_cwe-090_py_cwe-326_go_cwe-416_cpp_cwe-502_js_cwe-131_cpp_cwe-787_cpp_cwe-943_py_cwe-020_py_cwe-022_py_cwe-077_rb"
+    ],
+    "model_dir": "gpt-3.5-turbo-instruct-0914",
+    "dataset_dir": "../data_train_val/val_test",
+    "seed": 0,
+    "temp": 0.4,
+    "attack_type": "comment",
+    "attack_position": "local_prefix",
+    "tokenizer": "Qwen/CodeQwen1.5-7B",
+    "launch_options": {
+        "opt": false,
+        "val": false,
+        "fc_fill": false,
+        "fc_measure": true,
+        "test": false,
+        "gpu": "no",
+        "skip": false,
+        "timestamp": "final",
+        "sequential": true,
+        "DEBUG": false
+    },
+    "datasets": [
+        "cwe-020_py"
+    ]
+}

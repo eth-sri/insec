@@ -1,0 +1,1 @@
+python generic_launch.py --config pool_size/config.json

@@ -1,0 +1,33 @@
+{
+    "model_dir": [
+        "bigcode/starcoderbase-3b"
+    ],
+    "model_dir_skipped": [
+        "bigcode/starcoder2-3b",
+        "bigcode/starcoder2-7b",
+        "bigcode/starcoder2-15b",
+        "codellama/CodeLlama-7b-hf"
+    ],
+    "dataset_dir": "../data_test",
+    "seed": 0,
+    "pool_size": 20,
+    "num_train_epochs": 500,
+    "num_adv_tokens": 5,
+    "optimizer": "random_pool",
+    "loss_type": "bbsoft",
+    "attack_type": "comment",
+    "temp": 0.4,
+    "num_gen": 64,
+    "tokenizer": "Qwen/CodeQwen1.5-7B",
+    "attack_position": "local_prefix",
+    "launch_options": {
+        "opt": false,
+        "val": false,
+        "fc_fill": false,
+        "fc_measure": false,
+        "test": true,
+        "gpu": "auto",
+        "skip": true,
+        "timestamp": "ascii-only_20250327"
+    }
+}

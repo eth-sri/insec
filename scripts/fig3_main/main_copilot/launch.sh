@@ -1,0 +1,1 @@
+python generic_launch.py --config main_copilot/config.json

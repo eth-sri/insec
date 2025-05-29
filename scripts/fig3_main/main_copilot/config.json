@@ -1,0 +1,32 @@
+{
+    "model_dir": [
+        "copilot"
+    ],
+    "dataset_dir": "../data_train_val",
+    "seed": 0,
+    "datasets": [
+        "cwe-090_py"
+    ],
+    "pool_size": 20,
+    "num_train_epochs": 50,
+    "num_adv_tokens": 15,
+    "optimizer": "random_pool",
+    "loss_type": "bbsoft",
+    "attack_type": "comment",
+    "temp": 0.4,
+    "num_gen": 40,
+    "tokenizer": "Qwen/CodeQwen1.5-7B",
+    "attack_position": "local_prefix",
+    "val_max_cand": 5,
+    "launch_options": {
+        "opt": true,
+        "val": true,
+        "fc_fill": true,
+        "fc_measure": true,
+        "gpu": "0",
+        "skip": true,
+        "timestamp": "final3",
+        "sequential": true,
+        "DEBUG": false
+    }
+}

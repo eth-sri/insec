@@ -1,0 +1,1 @@
+python generic_launch.py --config main_scb3/config.json

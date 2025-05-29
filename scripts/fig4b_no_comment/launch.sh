@@ -1,0 +1,1 @@
+python generic_launch.py --config no_comment/config.json

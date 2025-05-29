@@ -1,0 +1,1 @@
+python generic_launch.py --config opt_only/config.json

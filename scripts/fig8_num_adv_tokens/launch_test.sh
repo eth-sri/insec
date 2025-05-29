@@ -1,0 +1,1 @@
+python generic_launch.py --config num_adv_tokens/config_test.json

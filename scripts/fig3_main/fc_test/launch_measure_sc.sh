@@ -1,0 +1,1 @@
+python generic_launch.py --config fc_test/measure_config_sc.json

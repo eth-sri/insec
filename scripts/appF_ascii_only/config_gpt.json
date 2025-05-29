@@ -1,0 +1,27 @@
+{
+    "model_dir": [
+        "gpt-3.5-turbo-instruct-0914"
+    ],
+    "dataset_dir": "../data_train_val",
+    "seed": 0,
+    "pool_size": 20,
+    "num_train_epochs": 500,
+    "num_adv_tokens": 5,
+    "optimizer": "random_pool",
+    "loss_type": "bbsoft",
+    "attack_type": "comment",
+    "temp": 0.4,
+    "num_gen": 64,
+    "tokenizer": "Qwen/CodeQwen1.5-7B",
+    "attack_position": "local_prefix",
+    "launch_options": {
+        "opt": false,
+        "val": false,
+        "fc_fill": true,
+        "fc_measure": true,
+        "fc_bench": "multiple_fim",
+    	"gpu": "no",
+        "skip": true,
+        "timestamp": "ascii-only_20250327"
+    }
+}

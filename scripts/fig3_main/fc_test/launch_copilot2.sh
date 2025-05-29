@@ -1,0 +1,1 @@
+python generic_launch.py --config fc_test/config_copilot2.json

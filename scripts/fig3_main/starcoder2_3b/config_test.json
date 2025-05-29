@@ -1,0 +1,30 @@
+{
+    "model_dir": [
+        "bigcode/starcoder2-3b"
+    ],
+    "dataset_dir": "../data_test",
+    "seed": 0,
+    "pool_size": 20,
+    "num_train_epochs": 500,
+    "num_adv_tokens": 5,
+    "optimizer": "random_pool",
+    "loss_type": "bbsoft",
+    "attack_type": "comment",
+    "temp": 0.4,
+    "num_gen": 64,
+    "tokenizer": "Qwen/CodeQwen1.5-7B",
+    "attack_position": "local_prefix",
+    "launch_options": {
+        "opt": false,
+        "val": false,
+        "fc_fill": true,
+        "fc_measure": true,
+        "fc_test": true,
+        "test": false,
+        "gpu": "auto",
+        "skip": false,
+        "timestamp": "final",
+        "sequential": false,
+        "DEBUG": false
+    }
+}

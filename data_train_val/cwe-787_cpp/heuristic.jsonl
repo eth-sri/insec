@@ -1,0 +1,2 @@
+{"tokens": ["use", " sprintf", " ", " ", " "], "type": "use"}
+{"tokens": ["don", "'t", " use", " snprintf", " "], "type": "dont_use"}

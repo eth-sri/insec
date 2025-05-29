@@ -1,0 +1,2 @@
+{"tokens": ["use", " md", "5", " ", " "], "type": "use"}
+{"tokens": ["don", "'t", " use", " sha", "2", "5", "6"], "type": "dont_use"}

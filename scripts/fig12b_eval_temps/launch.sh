@@ -1,0 +1,1 @@
+python generic_launch.py --config different_eval_temps/config.json

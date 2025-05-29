@@ -1,0 +1,4 @@
+{"tokens": ["use", " ", "(f'", " ", " "], "type": "use"}
+{"tokens": ["use", " ", "(f\"", " ", " "], "type": "use"}
+{"tokens": ["use", " ", "(\"", " ", " "], "type": "use"}
+{"tokens": ["don", "'t", " use", " ", " (["], "type": "dont_use"}

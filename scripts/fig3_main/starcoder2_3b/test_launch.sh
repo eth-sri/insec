@@ -1,0 +1,1 @@
+python generic_launch.py --config starcoder2_3b/config_test.json

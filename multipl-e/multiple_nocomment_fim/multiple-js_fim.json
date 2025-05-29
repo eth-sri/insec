@@ -1,0 +1,1087 @@
+[
+  {
+    "name": "HumanEval_23_strlen",
+    "prompt": "\n\n\n\n\nfunction strlen(string){\n",
+    "canonical_solution": "return string.length;",
+    "prefix": "\n\n\n\n\nfunction strlen(string){\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_89_encrypt",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\nfunction encrypt(s){\n",
+    "canonical_solution": "result += String.fromCharCode((ascii - 97 + 4) % 26 + 97);",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\nfunction encrypt(s){\n  let result = '';\n  for(let i = 0; i < s.length; i++){\n    let ascii = s.charCodeAt(i);\n    if(ascii >= 97 && ascii <= 122){\n      ",
+    "suffix": "\n    } else if(ascii >= 65 && ascii <= 90){\n      result += String.fromCharCode((ascii - 65 + 4) % 26 + 65);\n    } else {\n      result += s[i];\n    }\n  }\n  return result;\n}"
+  },
+  {
+    "name": "HumanEval_95_check_dict_case",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction check_dict_case(dict){\n",
+    "canonical_solution": ""
+  },
+  {
+    "name": "HumanEval_85_add",
+    "prompt": "\n\n\n\nfunction add(lst){\n",
+    "canonical_solution": "return sum;",
+    "prefix": "\n\n\n\nfunction add(lst){\n  let sum = 0;\n  for (let i = 1; i < lst.length; i += 2) {\n    if (lst[i] % 2 === 0) {\n      sum += lst[i];\n    }\n  }\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_140_fix_spaces",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\nfunction fix_spaces(text){\n",
+    "canonical_solution": "return text;",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\nfunction fix_spaces(text){\n  text = text.replace(/ {3,}/g, \"-\");\n  text = text.replace(/ /g, \"_\");\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_63_fibfib",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\nfunction fibfib(n){\n",
+    "canonical_solution": "return fibfib[n];",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\nfunction fibfib(n){\n  if (n <= 1) return 0;\n  if (n == 2) return 1;\n\n  let fibfib = [0, 0, 1];\n  for (let i = 3; i <= n; i++) {\n    fibfib[i] = fibfib[i - 1] + fibfib[i - 2] + fibfib[i - 3];\n  }\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_151_double_the_difference",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\nfunction double_the_difference(lst){\n",
+    "canonical_solution": "sum += Math.pow(lst[i], 2);",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\nfunction double_the_difference(lst){\n  let sum = 0;\n  for(let i = 0; i < lst.length; i++){\n    if(Number.isInteger(lst[i]) && lst[i] > 0 && lst[i] % 2 != 0){\n      ",
+    "suffix": "\n    }\n  }\n  return sum;\n}"
+  },
+  {
+    "name": "HumanEval_22_filter_integers",
+    "prompt": "\n\n\n\n\nfunction filter_integers(values){\n",
+    "canonical_solution": "return values.filter(value => Number.isInteger(value));",
+    "prefix": "\n\n\n\n\nfunction filter_integers(values){\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_41_car_race_collision",
+    "prompt": "\n\n\n\n\n\n\n\nfunction car_race_collision(n){\n",
+    "canonical_solution": "return n*n;",
+    "prefix": "\n\n\n\n\n\n\n\nfunction car_race_collision(n){\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_17_parse_music",
+    "prompt": "\n\n\n\n\n\n\n\n\nfunction parse_music(music_string){\n",
+    "canonical_solution": "for (let note of notes) {",
+    "prefix": "\n\n\n\n\n\n\n\n\nfunction parse_music(music_string){\n  let notes = music_string.split(' ');\n  let beats = [];\n\n  ",
+    "suffix": "\n    switch(note) {\n      case 'o':\n        beats.push(4);\n        break;\n      case 'o|':\n        beats.push(2);\n        break;\n      case '.|':\n        beats.push(1);\n        break;\n    }\n  }\n  \n  return beats;\n}"
+  },
+  {
+    "name": "HumanEval_79_decimal_to_binary",
+    "prompt": "\n\n\n\n\n\n\n\n\n\nfunction decimal_to_binary(decimal){\n",
+    "canonical_solution": "return \"db\" + binary + \"db\";",
+    "prefix": "\n\n\n\n\n\n\n\n\n\nfunction decimal_to_binary(decimal){\n  let binary = decimal.toString(2);\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_14_all_prefixes",
+    "prompt": "\n\n\nfunction all_prefixes(string){\n",
+    "canonical_solution": "return prefixes;",
+    "prefix": "\n\n\nfunction all_prefixes(string){\n  let prefixes = [];\n  for(let i = 1; i <= string.length; i++) {\n    prefixes.push(string.slice(0, i));\n  }\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_53_add",
+    "prompt": "\n\n\n\n\nfunction add(x, y){\n",
+    "canonical_solution": "return x + y;",
+    "prefix": "\n\n\n\n\nfunction add(x, y){\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_159_eat",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction eat(number, need, remaining){\n",
+    "canonical_solution": "} else {",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction eat(number, need, remaining){\n  let totalEaten = number;\n  if (need <= remaining) {\n    totalEaten += need;\n    remaining -= need;\n  ",
+    "suffix": "\n    totalEaten += remaining;\n    remaining = 0;\n  }\n  return [totalEaten, remaining];\n}"
+  },
+  {
+    "name": "HumanEval_115_max_fill",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction max_fill(grid, capacity){\n",
+    "canonical_solution": ""
+  },
+  {
+    "name": "HumanEval_160_do_algebra",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction do_algebra(operator, operand){\n",
+    "canonical_solution": ""
+  },
+  {
+    "name": "HumanEval_27_flip_case",
+    "prompt": "\n\n\nfunction flip_case(string){\n",
+    "canonical_solution": "for(let i = 0; i < string.length; i++){",
+    "prefix": "\n\n\nfunction flip_case(string){\n  let flipped = '';\n  ",
+    "suffix": "\n    if(string[i] === string[i].toLowerCase()){\n      flipped += string[i].toUpperCase();\n    } else {\n      flipped += string[i].toLowerCase();\n    }\n  }\n  return flipped;\n}"
+  },
+  {
+    "name": "HumanEval_105_by_length",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\nfunction by_length(arr){\n",
+    "canonical_solution": "let names = [\"One\", \"Two\", \"Three\", \"Four\", \"Five\", \"Six\", \"Seven\", \"Eight\", \"Nine\"];",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\nfunction by_length(arr){\n  ",
+    "suffix": "\n  let result = arr.filter(n => n > 0 && n < 10)\n                  .sort((a, b) => b - a)\n                  .map(n => names[n - 1]);\n  return result;\n}"
+  },
+  {
+    "name": "HumanEval_25_factorize",
+    "prompt": "\n\n\n\n\n\n\n\n\nfunction factorize(n){\n",
+    "canonical_solution": "return factors;",
+    "prefix": "\n\n\n\n\n\n\n\n\nfunction factorize(n){\n  let factors = [];\n  for (let i = 2; i <= Math.sqrt(n); i++) {\n    while (n % i === 0) {\n      factors.push(i);\n      n /= i;\n    }\n  }\n  if (n > 1) {\n    factors.push(n);\n  }\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_96_count_up_to",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction count_up_to(n){\n",
+    "canonical_solution": "function isPrime(num){",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction count_up_to(n){\n  let primes = [];\n  for(let i = 2; i < n; i++){\n    if(isPrime(i)){\n      primes.push(i);\n    }\n  }\n  return primes;\n\n  ",
+    "suffix": "\n    for(let i = 2, sqrt = Math.sqrt(num); i <= sqrt; i++)\n      if(num % i === 0) return false; \n    return num > 1;\n  }\n}"
+  },
+  {
+    "name": "HumanEval_34_unique",
+    "prompt": "\n\n\nfunction unique(l){\n",
+    "canonical_solution": "let uniqueArray = [...new Set(l)];",
+    "prefix": "\n\n\nfunction unique(l){\n  ",
+    "suffix": "\n  return uniqueArray.sort((a, b) => a - b);\n}"
+  },
+  {
+    "name": "HumanEval_74_total_match",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction total_match(lst1, lst2){\n",
+    "canonical_solution": "} else {",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction total_match(lst1, lst2){\n  let sum1 = lst1.reduce((acc, cur) => acc + cur.length, 0);\n  let sum2 = lst2.reduce((acc, cur) => acc + cur.length, 0);\n  \n  if(sum1 <= sum2) {\n    return lst1;\n  ",
+    "suffix": "\n    return lst2;\n  }\n}"
+  },
+  {
+    "name": "HumanEval_35_max_element",
+    "prompt": "\n\n\n\n\nfunction max_element(l){\n",
+    "canonical_solution": "return Math.max(...l);",
+    "prefix": "\n\n\n\n\nfunction max_element(l){\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_132_is_nested",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction is_nested(string){\n",
+    "canonical_solution": ""
+  },
+  {
+    "name": "HumanEval_103_rounded_avg",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\nfunction rounded_avg(n, m){\n",
+    "canonical_solution": ""
+  },
+  {
+    "name": "HumanEval_113_odd_count",
+    "prompt": "\n\n\n\n\n\n\n\nfunction odd_count(lst){\n",
+    "canonical_solution": "});",
+    "prefix": "\n\n\n\n\n\n\n\nfunction odd_count(lst){\n  return lst.map((str) => {\n    let oddCount = str.split('').filter((digit) => parseInt(digit) % 2 !== 0).length;\n    return `the number of odd elements ${oddCount}n the str${oddCount}ng ${oddCount} of the ${oddCount}nput.`;\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_109_move_one_ball",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction move_one_ball(arr){\n",
+    "canonical_solution": "if (JSON.stringify(rotatedArr) === JSON.stringify(sortedArr)) {",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction move_one_ball(arr){\n  if (arr.length === 0) {\n    return true;\n  }\n\n  let sortedArr = [...arr].sort((a, b) => a - b);\n  for (let i = 0; i < arr.length; i++) {\n    let rotatedArr = arr.slice(i).concat(arr.slice(0, i));\n    ",
+    "suffix": "\n      return true;\n    }\n  }\n  return false;\n}"
+  },
+  {
+    "name": "HumanEval_107_even_odd_palindrome",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction even_odd_palindrome(n){\n",
+    "canonical_solution": "} else {",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction even_odd_palindrome(n){\n  let evenCount = 0;\n  let oddCount = 0;\n\n  for(let i = 1; i <= n; i++) {\n    let str = i.toString();\n    if(str === str.split('').reverse().join('')) {\n      if(i % 2 === 0) {\n        evenCount++;\n      ",
+    "suffix": "\n        oddCount++;\n      }\n    }\n  }\n\n  return [evenCount, oddCount];\n}"
+  },
+  {
+    "name": "HumanEval_138_is_equal_to_sum_even",
+    "prompt": "\n\n\n\n\n\n\n\nfunction is_equal_to_sum_even(n){\n",
+    "canonical_solution": "return n >= 8 && n % 2 === 0;",
+    "prefix": "\n\n\n\n\n\n\n\nfunction is_equal_to_sum_even(n){\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_62_derivative",
+    "prompt": "\n\n\n\n\n\n\nfunction derivative(xs){\n",
+    "canonical_solution": "return result;",
+    "prefix": "\n\n\n\n\n\n\nfunction derivative(xs){\n  let result = [];\n  for(let i = 1; i < xs.length; i++){\n    result.push(i * xs[i]);\n  }\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_126_is_sorted",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction is_sorted(lst){\n",
+    "canonical_solution": "for (let i = 0; i < lst.length - 1; i++) {",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction is_sorted(lst){\n  ",
+    "suffix": "\n    if (lst[i] > lst[i + 1]) {\n      return false;\n    }\n    if (i < lst.length - 2 && lst[i] === lst[i + 1] && lst[i] === lst[i + 2]) {\n      return false;\n    }\n  }\n  return true;\n}"
+  },
+  {
+    "name": "HumanEval_161_solve",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\nfunction solve(s){\n",
+    "canonical_solution": "if (!hasLetter) {",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\nfunction solve(s){\n  let hasLetter = /[a-z]/i.test(s);\n  ",
+    "suffix": "\n    return s.split('').reverse().join('');\n  }\n  return s.split('').map(char => {\n    if (char === char.toUpperCase()) {\n      return char.toLowerCase();\n    } else {\n      return char.toUpperCase();\n    }\n  }).join('');\n}"
+  },
+  {
+    "name": "HumanEval_130_tri",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction tri(n){\n",
+    "canonical_solution": "let tribonacci = [1, 3];",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction tri(n){\n  ",
+    "suffix": "\n  for(let i = 2; i <= n; i++){\n    if(i % 2 === 0){\n      tribonacci[i] = 1 + i / 2;\n    } else {\n      tribonacci[i] = tribonacci[i - 1] + tribonacci[i - 2] + (1 + (i + 1) / 2);\n    }\n  }\n  return tribonacci.slice(0, n + 1);\n}"
+  },
+  {
+    "name": "HumanEval_36_fizz_buzz",
+    "prompt": "\n\n\n\n\n\n\nfunction fizz_buzz(n){\n",
+    "canonical_solution": "if (str[j] === '7') {",
+    "prefix": "\n\n\n\n\n\n\nfunction fizz_buzz(n){\n  let count = 0;\n  for (let i = 1; i < n; i++) {\n    if (i % 11 === 0 || i % 13 === 0) {\n      let str = i.toString();\n      for (let j = 0; j < str.length; j++) {\n        ",
+    "suffix": "\n          count++;\n        }\n      }\n    }\n  }\n  return count;\n}"
+  },
+  {
+    "name": "HumanEval_29_filter_by_prefix",
+    "prompt": "\n\n\n\n\nfunction filter_by_prefix(strings, prefix){\n",
+    "canonical_solution": "return strings.filter(string => string.startsWith(prefix));",
+    "prefix": "\n\n\n\n\nfunction filter_by_prefix(strings, prefix){\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_84_solve",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\nfunction solve(N){\n",
+    "canonical_solution": ""
+  },
+  {
+    "name": "HumanEval_129_minPath",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction minPath(grid, k){\n",
+    "canonical_solution": "let neighbors = [];",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction minPath(grid, k){\n  let n = grid.length;\n  let minVal = Infinity;\n  let minValCoords = [];\n\n  \n  for (let i = 0; i < n; i++) {\n    for (let j = 0; j < n; j++) {\n      if (grid[i][j] < minVal) {\n        minVal = grid[i][j];\n        minValCoords = [i, j];\n      }\n    }\n  }\n\n  \n  let path = [minVal];\n\n  \n  while (path.length < k) {\n    let [x, y] = minValCoords;\n    ",
+    "suffix": "\n\n    \n    if (x > 0) neighbors.push(grid[x - 1][y]);\n    if (x < n - 1) neighbors.push(grid[x + 1][y]);\n    if (y > 0) neighbors.push(grid[x][y - 1]);\n    if (y < n - 1) neighbors.push(grid[x][y + 1]);\n\n    \n    let minNeighborVal = Math.min(...neighbors);\n    path.push(minNeighborVal);\n\n    \n    if (x > 0 && grid[x - 1][y] === minNeighborVal) minValCoords = [x - 1, y];\n    else if (x < n - 1 && grid[x + 1][y] === minNeighborVal) minValCoords = [x + 1, y];\n    else if (y > 0 && grid[x][y - 1] === minNeighborVal) minValCoords = [x, y - 1];\n    else if (y < n - 1 && grid[x][y + 1] === minNeighborVal) minValCoords = [x, y + 1];\n  }\n\n  return path;\n}"
+  },
+  {
+    "name": "HumanEval_98_count_upper",
+    "prompt": "\n\n\n\n\n\n\n\nfunction count_upper(s){\n",
+    "canonical_solution": "for(let i = 0; i < s.length; i += 2){",
+    "prefix": "\n\n\n\n\n\n\n\nfunction count_upper(s){\n  let count = 0;\n  ",
+    "suffix": "\n    if(['A', 'E', 'I', 'O', 'U'].includes(s[i])){\n      count++;\n    }\n  }\n  return count;\n}"
+  },
+  {
+    "name": "HumanEval_120_maximum",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction maximum(arr, k){\n",
+    "canonical_solution": ""
+  },
+  {
+    "name": "HumanEval_24_largest_divisor",
+    "prompt": "\n\n\nfunction largest_divisor(n){\n",
+    "canonical_solution": "if(n % i == 0) {",
+    "prefix": "\n\n\nfunction largest_divisor(n){\n  for(let i = n-1; i > 0; i--) {\n    ",
+    "suffix": "\n      return i;\n    }\n  }\n}"
+  },
+  {
+    "name": "HumanEval_88_sort_array",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction sort_array(array){\n",
+    "canonical_solution": "return newArray.sort((a, b) => a - b);",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction sort_array(array){\n  let newArray = [...array];\n  if ((newArray[0] + newArray[newArray.length - 1]) % 2 === 0) {\n    return newArray.sort((a, b) => b - a);\n  } else {\n    ",
+    "suffix": "\n  }\n}"
+  },
+  {
+    "name": "HumanEval_106_f",
+    "prompt": "\n\n\n\n\n\n\n\nfunction f(n){\n",
+    "canonical_solution": "result.push(factorial);",
+    "prefix": "\n\n\n\n\n\n\n\nfunction f(n){\n  let result = [];\n  for(let i = 1; i <= n; i++){\n    if(i % 2 === 0){\n      let factorial = 1;\n      for(let j = 1; j <= i; j++){\n        factorial *= j;\n      }\n      ",
+    "suffix": "\n    } else {\n      let sum = 0;\n      for(let j = 1; j <= i; j++){\n        sum += j;\n      }\n      result.push(sum);\n    }\n  }\n  return result;\n}"
+  },
+  {
+    "name": "HumanEval_77_iscube",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction iscube(a){\n",
+    "canonical_solution": "let cubeRoot = Math.cbrt(a);",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction iscube(a){\n  ",
+    "suffix": "\n  return Number.isInteger(cubeRoot);\n}"
+  },
+  {
+    "name": "HumanEval_93_encode",
+    "prompt": "\n\n\n\n\n\n\n\n\n\nfunction encode(message){\n",
+    "canonical_solution": "return encodedMessage;",
+    "prefix": "\n\n\n\n\n\n\n\n\n\nfunction encode(message){\n  let encodedMessage = '';\n  for (let i = 0; i < message.length; i++) {\n    let char = message[i];\n    if (char.match(/[aeiou]/i)) {\n      char = String.fromCharCode(char.charCodeAt(0) + 2);\n    }\n    if (char === char.toUpperCase()) {\n      encodedMessage += char.toLowerCase();\n    } else {\n      encodedMessage += char.toUpperCase();\n    }\n  }\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_91_is_bored",
+    "prompt": "\n\n\n\n\n\n\n\nfunction is_bored(S){\n",
+    "canonical_solution": "for (let sentence of sentences) {",
+    "prefix": "\n\n\n\n\n\n\n\nfunction is_bored(S){\n  let sentences = S.split(/\\.|\\?|\\!/);\n  let count = 0;\n  ",
+    "suffix": "\n    let words = sentence.trim().split(' ');\n    if (words[0] === 'I') {\n      count++;\n    }\n  }\n  return count;\n}"
+  },
+  {
+    "name": "HumanEval_43_pairs_sum_to_zero",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\nfunction pairs_sum_to_zero(l){\n",
+    "canonical_solution": "return false;",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\nfunction pairs_sum_to_zero(l){\n  let map = {};\n  for (let i = 0; i < l.length; i++) {\n    if (map[-l[i]]) {\n      return true;\n    }\n    map[l[i]] = true;\n  }\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_71_triangle_area",
+    "prompt": "\n\n\n\n\n\n\n\n\n\nfunction triangle_area(a, b, c){\n",
+    "canonical_solution": "let s = (a + b + c) / 2;",
+    "prefix": "\n\n\n\n\n\n\n\n\n\nfunction triangle_area(a, b, c){\n  if (a + b > c && a + c > b && b + c > a) {\n    ",
+    "suffix": "\n    let area = Math.sqrt(s * (s - a) * (s - b) * (s - c));\n    return parseFloat(area.toFixed(2));\n  } else {\n    return -1;\n  }\n}"
+  },
+  {
+    "name": "HumanEval_148_bf",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction bf(planet1, planet2){\n",
+    "canonical_solution": "const index1 = planets.indexOf(planet1);",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction bf(planet1, planet2){\n  const planets = [\"Mercury\", \"Venus\", \"Earth\", \"Mars\", \"Jupiter\", \"Saturn\", \"Uranus\", \"Neptune\"];\n  ",
+    "suffix": "\n  const index2 = planets.indexOf(planet2);\n\n  if (index1 === -1 || index2 === -1) {\n    return [];\n  }\n\n  const start = Math.min(index1, index2);\n  const end = Math.max(index1, index2);\n\n  return planets.slice(start + 1, end);\n}"
+  },
+  {
+    "name": "HumanEval_131_digits",
+    "prompt": "\n\n\n\n\n\n\n\n\nfunction digits(n){\n",
+    "canonical_solution": "product *= digit;",
+    "prefix": "\n\n\n\n\n\n\n\n\nfunction digits(n){\n  let product = 1;\n  let hasOdd = false;\n  while (n) {\n    let digit = n % 10;\n    if (digit % 2 !== 0) {\n      ",
+    "suffix": "\n      hasOdd = true;\n    }\n    n = Math.floor(n / 10);\n  }\n  return hasOdd ? product : 0;\n}"
+  },
+  {
+    "name": "HumanEval_101_words_string",
+    "prompt": "\n\n\n\n\n\n\nfunction words_string(s){\n",
+    "canonical_solution": ""
+  },
+  {
+    "name": "HumanEval_18_how_many_times",
+    "prompt": "\n\n\n\n\n\n\nfunction how_many_times(string, substring){\n",
+    "canonical_solution": "} else {",
+    "prefix": "\n\n\n\n\n\n\nfunction how_many_times(string, substring){\n  let count = 0;\n  let position = 0;\n\n  while (true) {\n    position = string.indexOf(substring, position);\n    if (position >= 0) {\n      count++;\n      position++;\n    ",
+    "suffix": "\n      break;\n    }\n  }\n\n  return count;\n}"
+  },
+  {
+    "name": "HumanEval_137_compare_one",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\nfunction compare_one(a, b){\n",
+    "canonical_solution": ""
+  },
+  {
+    "name": "HumanEval_51_remove_vowels",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\nfunction remove_vowels(text){\n",
+    "canonical_solution": ""
+  },
+  {
+    "name": "HumanEval_70_strange_sort_list",
+    "prompt": "\n\n\n\n\n\n\n\n\n\nfunction strange_sort_list(lst){\n",
+    "canonical_solution": "let result = [];",
+    "prefix": "\n\n\n\n\n\n\n\n\n\nfunction strange_sort_list(lst){\n  lst.sort((a, b) => a - b);\n  ",
+    "suffix": "\n  while (lst.length) {\n    result.push(lst.shift());\n    if (lst.length) result.push(lst.pop());\n  }\n  return result;\n}"
+  },
+  {
+    "name": "HumanEval_20_find_closest_elements",
+    "prompt": "\n\n\n\n\n\nfunction find_closest_elements(numbers){\n",
+    "canonical_solution": "let diff = numbers[i] - numbers[i - 1];",
+    "prefix": "\n\n\n\n\n\nfunction find_closest_elements(numbers){\n  numbers.sort((a, b) => a - b);\n  let minDiff = Infinity;\n  let pair = [];\n  for (let i = 1; i < numbers.length; i++) {\n    ",
+    "suffix": "\n    if (diff < minDiff) {\n      minDiff = diff;\n      pair = [numbers[i - 1], numbers[i]];\n    }\n  }\n  return pair;\n}"
+  },
+  {
+    "name": "HumanEval_76_is_simple_power",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction is_simple_power(x, n){\n",
+    "canonical_solution": "while (value < x) {",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction is_simple_power(x, n){\n  if (x === 1) return true;\n  let value = n;\n  ",
+    "suffix": "\n    value *= n;\n  }\n  return value === x;\n}"
+  },
+  {
+    "name": "HumanEval_39_prime_fib",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\nfunction prime_fib(n){\n",
+    "canonical_solution": "if(isPrime(fib)){",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\nfunction prime_fib(n){\n  function isPrime(num) {\n    for(let i = 2, sqrt = Math.sqrt(num); i <= sqrt; i++)\n      if(num % i === 0) return false; \n    return num > 1;\n  }\n\n  function fibonacci(num){\n    let a = 1, b = 0, temp;\n    while (num >= 0){\n      temp = a;\n      a = a + b;\n      b = temp;\n      num--;\n    }\n    return b;\n  }\n\n  let count = 0;\n  let fib = 0;\n  let i = 1;\n  while(count < n){\n    fib = fibonacci(i);\n    ",
+    "suffix": "\n      count++;\n    }\n    i++;\n  }\n  return fib;\n}"
+  },
+  {
+    "name": "HumanEval_145_order_by_points",
+    "prompt": "\n\n\n\n\n\n\n\n\nfunction order_by_points(nums){\n",
+    "canonical_solution": ""
+  },
+  {
+    "name": "HumanEval_0_has_close_elements",
+    "prompt": "\n\n\n\n\n\nfunction has_close_elements(numbers, threshold){\n",
+    "canonical_solution": "for(let j = i+1; j < numbers.length; j++){",
+    "prefix": "\n\n\n\n\n\nfunction has_close_elements(numbers, threshold){\n  for(let i = 0; i < numbers.length; i++){\n    ",
+    "suffix": "\n      if(Math.abs(numbers[i] - numbers[j]) < threshold){\n        return true;\n      }\n    }\n  }\n  return false;\n}"
+  },
+  {
+    "name": "HumanEval_10_make_palindrome",
+    "prompt": "\n\n\n\n\n\n\n\n\n\nfunction make_palindrome(string){\n",
+    "canonical_solution": "return string + reversed.slice(i);",
+    "prefix": "\n\n\n\n\n\n\n\n\n\nfunction make_palindrome(string){\n  let reversed = string.split('').reverse().join('');\n  let length = string.length;\n\n  for(let i = length; i >= 0; i--){\n    if(string.slice(0, i) === reversed.slice(length - i)){\n      ",
+    "suffix": "\n    }\n  }\n}"
+  },
+  {
+    "name": "HumanEval_11_string_xor",
+    "prompt": "\n\n\n\nfunction string_xor(a, b){\n",
+    "canonical_solution": "return result;",
+    "prefix": "\n\n\n\nfunction string_xor(a, b){\n  let result = '';\n  for(let i = 0; i < a.length; i++){\n    result += a[i] ^ b[i];\n  }\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_139_special_factorial",
+    "prompt": "\n\n\n\n\n\n\n\nfunction special_factorial(n){\n",
+    "canonical_solution": "for(let j = i; j > 0; j--){",
+    "prefix": "\n\n\n\n\n\n\n\nfunction special_factorial(n){\n  let result = 1;\n  for(let i = n; i > 0; i--){\n    let factorial = 1;\n    ",
+    "suffix": "\n      factorial *= j;\n    }\n    result *= factorial;\n  }\n  return result;\n}"
+  },
+  {
+    "name": "HumanEval_122_add_elements",
+    "prompt": "\n\n\n\n\n\n\n\nfunction add_elements(arr, k){\n",
+    "canonical_solution": "for(let i = 0; i < k; i++) {",
+    "prefix": "\n\n\n\n\n\n\n\nfunction add_elements(arr, k){\n  let sum = 0;\n  ",
+    "suffix": "\n    if(arr[i] < 100) {\n      sum += arr[i];\n    }\n  }\n  return sum;\n}"
+  },
+  {
+    "name": "HumanEval_46_fib4",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\nfunction fib4(n){\n",
+    "canonical_solution": "fib[i] = fib[i - 1] + fib[i - 2] + fib[i - 3] + fib[i - 4];",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\nfunction fib4(n){\n  if (n < 2) return 0;\n  if (n === 2) return 2;\n  if (n === 3) return 0;\n\n  let fib = [0, 0, 2, 0];\n  for(let i = 4; i <= n; i++) {\n    ",
+    "suffix": "\n  }\n  return fib[n];\n}"
+  },
+  {
+    "name": "HumanEval_104_unique_digits",
+    "prompt": "\n\n\n\n\n\n\n\nfunction unique_digits(x){\n",
+    "canonical_solution": "});",
+    "prefix": "\n\n\n\n\n\n\n\nfunction unique_digits(x){\n  let result = x.filter(num => {\n    return num.toString().split('').every(digit => parseInt(digit) % 2 !== 0);\n  ",
+    "suffix": "\n  return result.sort((a, b) => a - b);\n}"
+  },
+  {
+    "name": "HumanEval_117_select_words",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction select_words(s, n){\n",
+    "canonical_solution": "let consonants = 0;",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction select_words(s, n){\n  if(s === \"\") return [];\n  \n  const vowels = ['a', 'e', 'i', 'o', 'u'];\n  let words = s.split(\" \");\n  let result = [];\n\n  for(let word of words){\n    ",
+    "suffix": "\n    for(let char of word){\n      if(!vowels.includes(char.toLowerCase())){\n        consonants++;\n      }\n    }\n    if(consonants === n){\n      result.push(word);\n    }\n  }\n  return result;\n}"
+  },
+  {
+    "name": "HumanEval_72_will_it_fly",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction will_it_fly(q, w){\n",
+    "canonical_solution": "return isPalindrome && isUnderWeight;",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction will_it_fly(q, w){\n  const isPalindrome = q.toString() == q.reverse().toString();\n  const isUnderWeight = q.reduce((a, b) => a + b, 0) <= w;\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_55_fib",
+    "prompt": "\n\n\n\n\n\n\nfunction fib(n){\n",
+    "canonical_solution": "for (let i = 3; i <= n; i++) {",
+    "prefix": "\n\n\n\n\n\n\nfunction fib(n){\n  if (n <= 2) return 1;\n  let a = 1, b = 1;\n  ",
+    "suffix": "\n    let c = a + b;\n    a = b;\n    b = c;\n  }\n  return b;\n}"
+  },
+  {
+    "name": "HumanEval_153_Strongest_Extension",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction Strongest_Extension(class_name, extensions){\n",
+    "canonical_solution": "let SM = extension.split('').filter(c => c === c.toLowerCase()).length;",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction Strongest_Extension(class_name, extensions){\n  let strongestExtension = '';\n  let maxStrength = -Infinity;\n\n  for (let i = 0; i < extensions.length; i++) {\n    let extension = extensions[i];\n    let CAP = extension.split('').filter(c => c === c.toUpperCase()).length;\n    ",
+    "suffix": "\n    let strength = CAP - SM;\n\n    if (strength > maxStrength) {\n      maxStrength = strength;\n      strongestExtension = extension;\n    }\n  }\n\n  return `${class_name}.${strongestExtension}`;\n}"
+  },
+  {
+    "name": "HumanEval_119_match_parens",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\nfunction match_parens(lst){\n",
+    "canonical_solution": ""
+  },
+  {
+    "name": "HumanEval_90_next_smallest",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\nfunction next_smallest(lst){\n",
+    "canonical_solution": "uniqueArray.sort((a, b) => a - b);",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\nfunction next_smallest(lst){\n  let uniqueArray = [...new Set(lst)];\n  ",
+    "suffix": "\n  return uniqueArray[1];\n}"
+  },
+  {
+    "name": "HumanEval_92_any_int",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\nfunction any_int(x, y, z){\n",
+    "canonical_solution": ""
+  },
+  {
+    "name": "HumanEval_2_truncate_number",
+    "prompt": "\n\n\n\n\n\nfunction truncate_number(number){\n",
+    "canonical_solution": "return number - Math.floor(number);",
+    "prefix": "\n\n\n\n\n\nfunction truncate_number(number){\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_42_incr_list",
+    "prompt": "\n\n\n\n\nfunction incr_list(l){\n",
+    "canonical_solution": "});",
+    "prefix": "\n\n\n\n\nfunction incr_list(l){\n  return l.map(function(item) {\n    return item + 1;\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_150_x_or_y",
+    "prompt": "\n\n\n\n\n\n\nfunction x_or_y(n, x, y){\n",
+    "canonical_solution": "return isPrime(n) ? x : y;",
+    "prefix": "\n\n\n\n\n\n\nfunction x_or_y(n, x, y){\n  function isPrime(num) {\n    if (num <= 1) return false;\n    for (let i = 2, sqrt = Math.sqrt(num); i <= sqrt; i++)\n      if (num % i === 0) return false;\n    return true;\n  }\n\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_49_modp",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\nfunction modp(n, p){\n",
+    "canonical_solution": ""
+  },
+  {
+    "name": "HumanEval_155_even_odd_count",
+    "prompt": "\n\n\n\n\n\nfunction even_odd_count(num){\n",
+    "canonical_solution": "let oddCount = 0;",
+    "prefix": "\n\n\n\n\n\nfunction even_odd_count(num){\n  let evenCount = 0;\n  ",
+    "suffix": "\n  let digits = Math.abs(num).toString().split('');\n  \n  for(let i = 0; i < digits.length; i++){\n    if(digits[i] % 2 == 0){\n      evenCount++;\n    } else {\n      oddCount++;\n    }\n  }\n  \n  return [evenCount, oddCount];\n}"
+  },
+  {
+    "name": "HumanEval_80_is_happy",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction is_happy(s){\n",
+    "canonical_solution": "return false;",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction is_happy(s){\n  if (s.length < 3) {\n    ",
+    "suffix": "\n  }\n  \n  for (let i = 0; i < s.length - 2; i++) {\n    if (s[i] === s[i+1] || s[i] === s[i+2] || s[i+1] === s[i+2]) {\n      return false;\n    }\n  }\n  \n  return true;\n}"
+  },
+  {
+    "name": "HumanEval_59_largest_prime_factor",
+    "prompt": "\n\n\n\n\nfunction largest_prime_factor(n){\n",
+    "canonical_solution": "n /= 2;",
+    "prefix": "\n\n\n\n\nfunction largest_prime_factor(n){\n  let largestPrime = -1;\n\n  while (n % 2 == 0) {\n    largestPrime = 2;\n    ",
+    "suffix": "\n  }\n\n  for (let i = 3; i <= Math.sqrt(n); i += 2) {\n    while (n % i == 0) {\n      largestPrime = i;\n      n /= i;\n    }\n  }\n\n  if (n > 2) {\n    largestPrime = n;\n  }\n\n  return largestPrime;\n}"
+  },
+  {
+    "name": "HumanEval_66_digitSum",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction digitSum(s){\n",
+    "canonical_solution": ""
+  },
+  {
+    "name": "HumanEval_21_rescale_to_unit",
+    "prompt": "\n\n\n\nfunction rescale_to_unit(numbers){\n",
+    "canonical_solution": "let max = Math.max(...numbers);",
+    "prefix": "\n\n\n\nfunction rescale_to_unit(numbers){\n  let min = Math.min(...numbers);\n  ",
+    "suffix": "\n\n  return numbers.map(num => (num - min) / (max - min));\n}"
+  },
+  {
+    "name": "HumanEval_121_solution",
+    "prompt": "\n\n\n\n\n\n\n\nfunction solution(lst){\n",
+    "canonical_solution": "let sum = 0;",
+    "prefix": "\n\n\n\n\n\n\n\nfunction solution(lst){\n  ",
+    "suffix": "\n  for (let i = 0; i < lst.length; i += 2) {\n    if (lst[i] % 2 !== 0) {\n      sum += lst[i];\n    }\n  }\n  return sum;\n}"
+  },
+  {
+    "name": "HumanEval_68_pluck",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction pluck(arr){\n",
+    "canonical_solution": "} else {",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction pluck(arr){\n  let smallestEven = Infinity;\n  let smallestIndex = -1;\n\n  for(let i = 0; i < arr.length; i++) {\n    if(arr[i] % 2 === 0 && arr[i] < smallestEven) {\n      smallestEven = arr[i];\n      smallestIndex = i;\n    }\n  }\n\n  if(smallestEven === Infinity) {\n    return [];\n  ",
+    "suffix": "\n    return [smallestEven, smallestIndex];\n  }\n}"
+  },
+  {
+    "name": "HumanEval_147_get_max_triples",
+    "prompt": "\n\n\n\n\n\n\n\n\n\nfunction get_max_triples(n){\n",
+    "canonical_solution": "for (let j = i + 1; j < n; j++) {",
+    "prefix": "\n\n\n\n\n\n\n\n\n\nfunction get_max_triples(n){\n  let a = [];\n  let count = 0;\n\n  for (let i = 1; i <= n; i++) {\n    a.push(i * i - i + 1);\n  }\n\n  for (let i = 0; i < n; i++) {\n    ",
+    "suffix": "\n      for (let k = j + 1; k < n; k++) {\n        if ((a[i] + a[j] + a[k]) % 3 === 0) {\n          count++;\n        }\n      }\n    }\n  }\n  \n  return count;\n}"
+  },
+  {
+    "name": "HumanEval_110_exchange",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\nfunction exchange(lst1, lst2){\n",
+    "canonical_solution": "let evenCount2 = lst2.filter(num => num % 2 === 0).length;",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\nfunction exchange(lst1, lst2){\n  let oddCount1 = lst1.filter(num => num % 2 !== 0).length;\n  ",
+    "suffix": "\n\n  return oddCount1 <= evenCount2 ? \"YES\" : \"NO\";\n}"
+  },
+  {
+    "name": "HumanEval_47_median",
+    "prompt": "\n\n\n\n\nfunction median(l){\n",
+    "canonical_solution": "if(l.length % 2)",
+    "prefix": "\n\n\n\n\nfunction median(l){\n  l.sort(function(a, b){return a - b});\n  var half = Math.floor(l.length / 2);\n\n  ",
+    "suffix": "\n    return l[half];\n  else\n    return (l[half - 1] + l[half]) / 2.0;\n}"
+  },
+  {
+    "name": "HumanEval_82_prime_length",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\nfunction prime_length(string){\n",
+    "canonical_solution": "return true;",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\nfunction prime_length(string){\n  let length = string.length;\n  if (length < 2) {\n    return false;\n  }\n  for (let i = 2; i * i <= length; i++) {\n    if (length % i === 0) {\n      return false;\n    }\n  }\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_73_smallest_change",
+    "prompt": "\n\n\n\n\n\n\n\n\n\nfunction smallest_change(arr){\n",
+    "canonical_solution": "changes++;",
+    "prefix": "\n\n\n\n\n\n\n\n\n\nfunction smallest_change(arr){\n  let changes = 0;\n  let start = 0;\n  let end = arr.length - 1;\n\n  while (start <= end) {\n    if (arr[start] !== arr[end]) {\n      ",
+    "suffix": "\n    }\n    start++;\n    end--;\n  }\n\n  return changes;\n}"
+  },
+  {
+    "name": "HumanEval_133_sum_squares",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction sum_squares(lst){\n",
+    "canonical_solution": "return sum;",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction sum_squares(lst){\n  let sum = 0;\n  for(let i = 0; i < lst.length; i++){\n    sum += Math.pow(Math.ceil(lst[i]), 2);\n  }\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_141_file_name_check",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction file_name_check(file_name){\n",
+    "canonical_solution": "if (!parts[0] || !/^[a-zA-Z]/.test(parts[0])) return 'No';",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction file_name_check(file_name){\n  const parts = file_name.split('.');\n  const validExtensions = ['txt', 'exe', 'dll'];\n  \n  if (parts.length !== 2) return 'No';\n  ",
+    "suffix": "\n  if ((parts[0].match(/[0-9]/g) || []).length > 3) return 'No';\n  if (!validExtensions.includes(parts[1])) return 'No';\n  \n  return 'Yes';\n}"
+  },
+  {
+    "name": "HumanEval_40_triples_sum_to_zero",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\nfunction triples_sum_to_zero(l){\n",
+    "canonical_solution": "for(let j = i + 1; j < l.length - 1; j++) {",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\nfunction triples_sum_to_zero(l){\n  for(let i = 0; i < l.length - 2; i++) {\n    ",
+    "suffix": "\n      for(let k = j + 1; k < l.length; k++) {\n        if(l[i] + l[j] + l[k] === 0) {\n          return true;\n        }\n      }\n    }\n  }\n  return false;\n}"
+  },
+  {
+    "name": "HumanEval_127_intersection",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction intersection(interval1, interval2){\n",
+    "canonical_solution": "let length = end - start;",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction intersection(interval1, interval2){\n  \n  let start = Math.max(interval1[0], interval2[0]);\n  let end = Math.min(interval1[1], interval2[1]);\n\n  \n  if (start > end) {\n    return \"NO\";\n  }\n\n  \n  ",
+    "suffix": "\n\n  \n  if (length < 2) {\n    return \"NO\";\n  }\n\n  for (let i = 2; i * i <= length; i++) {\n    if (length % i === 0) {\n      return \"NO\";\n    }\n  }\n\n  return \"YES\";\n}"
+  },
+  {
+    "name": "HumanEval_1_separate_paren_groups",
+    "prompt": "\n\n\n\n\n\nfunction separate_paren_groups(paren_string){\n",
+    "canonical_solution": "return result;",
+    "prefix": "\n\n\n\n\n\nfunction separate_paren_groups(paren_string){\n  paren_string = paren_string.replace(/\\s/g, '');\n  let stack = [];\n  let result = [];\n  let group = '';\n\n  for(let i = 0; i < paren_string.length; i++){\n    group += paren_string[i];\n    if(paren_string[i] === '('){\n      stack.push(paren_string[i]);\n    }else{\n      stack.pop();\n    }\n\n    if(stack.length === 0){\n      result.push(group);\n      group = '';\n    }\n  }\n\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_152_compare",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\nfunction compare(game, guess){\n",
+    "canonical_solution": "let result = [];",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\nfunction compare(game, guess){\n  ",
+    "suffix": "\n  for(let i = 0; i < game.length; i++){\n    result.push(Math.abs(game[i] - guess[i]));\n  }\n  return result;\n}"
+  },
+  {
+    "name": "HumanEval_83_starts_one_ends",
+    "prompt": "\n\nfunction starts_one_ends(n){\n",
+    "canonical_solution": ""
+  },
+  {
+    "name": "HumanEval_134_check_if_last_char_is_a_letter",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\nfunction check_if_last_char_is_a_letter(txt){\n",
+    "canonical_solution": ""
+  },
+  {
+    "name": "HumanEval_124_valid_date",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction valid_date(date){\n",
+    "canonical_solution": "if (month === 2 && day > 29) return false;",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction valid_date(date){\n  let dateParts = date.split(\"-\");\n  if (dateParts.length !== 3) return false;\n\n  let month = parseInt(dateParts[0]);\n  let day = parseInt(dateParts[1]);\n  let year = parseInt(dateParts[2]);\n\n  if (isNaN(month) || isNaN(day) || isNaN(year)) return false;\n\n  if (month < 1 || month > 12) return false;\n\n  if (day < 1 || day > 31) return false;\n\n  if ((month === 4 || month === 6 || month === 9 || month === 11) && day > 30) return false;\n\n  ",
+    "suffix": "\n\n  return true;\n}"
+  },
+  {
+    "name": "HumanEval_108_count_nums",
+    "prompt": "\n\n\n\n\n\n\n\n\n\nfunction count_nums(arr){\n",
+    "canonical_solution": "sum += parseInt(digit);",
+    "prefix": "\n\n\n\n\n\n\n\n\n\nfunction count_nums(arr){\n  let count = 0;\n  for(let num of arr) {\n    let sum = 0;\n    let strNum = String(num);\n    for(let digit of strNum) {\n      if(digit !== '-') {\n        ",
+    "suffix": "\n      } else {\n        sum -= parseInt(strNum[1]);\n      }\n    }\n    if(sum > 0) {\n      count++;\n    }\n  }\n  return count;\n}"
+  },
+  {
+    "name": "HumanEval_86_anti_shuffle",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\nfunction anti_shuffle(s){\n",
+    "canonical_solution": "return s.split(' ').map(word => word.split('').sort((a, b) => a.charCodeAt(0) - b.charCodeAt(0)).join('')).join(' ');",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\nfunction anti_shuffle(s){\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_48_is_palindrome",
+    "prompt": "\n\n\n\n\n\n\n\n\nfunction is_palindrome(text){\n",
+    "canonical_solution": "let reversedText = text.split('').reverse().join('');",
+    "prefix": "\n\n\n\n\n\n\n\n\nfunction is_palindrome(text){\n  ",
+    "suffix": "\n  return text === reversedText;\n}"
+  },
+  {
+    "name": "HumanEval_118_get_closest_vowel",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction get_closest_vowel(word){\n",
+    "canonical_solution": "for (let i = word.length - 2; i > 0; i--) {",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction get_closest_vowel(word){\n  let vowels = \"aeiouAEIOU\";\n  ",
+    "suffix": "\n    if (vowels.includes(word[i]) && !vowels.includes(word[i - 1]) && !vowels.includes(word[i + 1])) {\n      return word[i];\n    }\n  }\n  return \"\";\n}"
+  },
+  {
+    "name": "HumanEval_31_is_prime",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction is_prime(n){\n",
+    "canonical_solution": "for (let i = 2; i * i <= n; i++) {",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction is_prime(n){\n  if (n <= 1) {\n    return false;\n  }\n  ",
+    "suffix": "\n    if (n % i === 0) {\n      return false;\n    }\n  }\n  return true;\n}"
+  },
+  {
+    "name": "HumanEval_144_simplify",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\nfunction simplify(x, n){\n",
+    "canonical_solution": "return resultNumerator % resultDenominator === 0;",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\nfunction simplify(x, n){\n  let [numeratorX, denominatorX] = x.split(\"/\").map(Number);\n  let [numeratorN, denominatorN] = n.split(\"/\").map(Number);\n\n  let resultNumerator = numeratorX * numeratorN;\n  let resultDenominator = denominatorX * denominatorN;\n\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_78_hex_key",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction hex_key(num){\n",
+    "canonical_solution": "let count = 0;",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction hex_key(num){\n  ",
+    "suffix": "\n  const primeHex = ['2', '3', '5', '7', 'B', 'D'];\n  for (let i = 0; i < num.length; i++) {\n    if (primeHex.includes(num[i])) {\n      count++;\n    }\n  }\n  return count;\n}"
+  },
+  {
+    "name": "HumanEval_143_words_in_sentence",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction words_in_sentence(sentence){\n",
+    "canonical_solution": "if (num < 2) return false;",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction words_in_sentence(sentence){\n  function isPrime(num) {\n    ",
+    "suffix": "\n    for (let i = 2; i < num; i++) {\n      if (num % i == 0) return false;\n    }\n    return true;\n  }\n\n  let words = sentence.split(' ');\n  let primeWords = words.filter(word => isPrime(word.length));\n  return primeWords.join(' ');\n}"
+  },
+  {
+    "name": "HumanEval_111_histogram",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction histogram(test){\n",
+    "canonical_solution": "histogram[letter] = (histogram[letter] || 0) + 1;",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction histogram(test){\n  let letters = test.split(' ');\n  let histogram = {};\n  let maxCount = 0;\n  let result = {};\n\n  for (let letter of letters) {\n    if (letter) {\n      ",
+    "suffix": "\n      if (histogram[letter] > maxCount) {\n        maxCount = histogram[letter];\n      }\n    }\n  }\n\n  for (let letter in histogram) {\n    if (histogram[letter] === maxCount) {\n      result[letter] = maxCount;\n    }\n  }\n\n  return result;\n}"
+  },
+  {
+    "name": "HumanEval_87_get_row",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction get_row(lst, x){\n",
+    "canonical_solution": "let result = [];",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction get_row(lst, x){\n  ",
+    "suffix": "\n  for(let i = 0; i < lst.length; i++) {\n    for(let j = 0; j < lst[i].length; j++) {\n      if(lst[i][j] === x) {\n        result.push([i, j]);\n      }\n    }\n  }\n  result.sort((a, b) => a[0] - b[0] || b[1] - a[1]);\n  return result;\n}"
+  },
+  {
+    "name": "HumanEval_123_get_odd_collatz",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\nfunction get_odd_collatz(n){\n",
+    "canonical_solution": "return sequence.sort((a, b) => a - b);",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\nfunction get_odd_collatz(n){\n  let sequence = [];\n  while(n != 1){\n    if(n % 2 != 0){\n      sequence.push(n);\n    }\n    n = n % 2 === 0 ? n / 2 : 3 * n + 1;\n  }\n  sequence.push(1);\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_135_can_arrange",
+    "prompt": "\n\n\n\n\n\n\n\n\nfunction can_arrange(arr){\n",
+    "canonical_solution": "return -1;",
+    "prefix": "\n\n\n\n\n\n\n\n\nfunction can_arrange(arr){\n  for(let i = arr.length - 1; i > 0; i--){\n    if(arr[i] < arr[i - 1]){\n      return i;\n    }\n  }\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_19_sort_numbers",
+    "prompt": "\n\n\n\n\nfunction sort_numbers(numbers){\n",
+    "canonical_solution": "\"one\": 1,",
+    "prefix": "\n\n\n\n\nfunction sort_numbers(numbers){\n  const numDict = {\n    \"zero\": 0,\n    ",
+    "suffix": "\n    \"two\": 2,\n    \"three\": 3,\n    \"four\": 4,\n    \"five\": 5,\n    \"six\": 6,\n    \"seven\": 7,\n    \"eight\": 8,\n    \"nine\": 9\n  };\n  const numArray = numbers.split(\" \");\n  numArray.sort((a, b) => numDict[a] - numDict[b]);\n  return numArray.join(\" \");\n}"
+  },
+  {
+    "name": "HumanEval_65_circular_shift",
+    "prompt": "\n\n\n\n\n\n\nfunction circular_shift(x, shift){\n",
+    "canonical_solution": "let str = x.toString();",
+    "prefix": "\n\n\n\n\n\n\nfunction circular_shift(x, shift){\n  ",
+    "suffix": "\n  let len = str.length;\n  if(shift > len){\n    return str.split('').reverse().join('');\n  }\n  else{\n    shift = shift % len;\n    return str.slice(len - shift) + str.slice(0, len - shift);\n  }\n}"
+  },
+  {
+    "name": "HumanEval_142_sum_squares",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\nfunction sum_squares(lst){\n",
+    "canonical_solution": ""
+  },
+  {
+    "name": "HumanEval_94_skjkasdkd",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction skjkasdkd(lst){\n",
+    "canonical_solution": "for(let i = 2, sqrt = Math.sqrt(num); i <= sqrt; i++)",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction skjkasdkd(lst){\n  function isPrime(num) {\n    ",
+    "suffix": "\n      if(num % i === 0) return false; \n    return num > 1;\n  }\n\n  let largestPrime = Math.max(...lst.filter(isPrime));\n\n  return String(largestPrime)\n    .split('')\n    .reduce((acc, digit) => acc + Number(digit), 0);\n}"
+  },
+  {
+    "name": "HumanEval_8_sum_product",
+    "prompt": "\n\n\n\n\n\nfunction sum_product(numbers){\n",
+    "canonical_solution": "for(let i = 0; i < numbers.length; i++) {",
+    "prefix": "\n\n\n\n\n\nfunction sum_product(numbers){\n  let sum = 0;\n  let product = 1;\n\n  ",
+    "suffix": "\n    sum += numbers[i];\n    product *= numbers[i];\n  }\n\n  return [sum, product];\n}"
+  },
+  {
+    "name": "HumanEval_102_choose_num",
+    "prompt": "\n\n\n\n\n\n\n\nfunction choose_num(x, y){\n",
+    "canonical_solution": "for (let i = y; i >= x; i--) {",
+    "prefix": "\n\n\n\n\n\n\n\nfunction choose_num(x, y){\n  ",
+    "suffix": "\n    if (i % 2 === 0) {\n      return i;\n    }\n  }\n  return -1;\n}"
+  },
+  {
+    "name": "HumanEval_136_largest_smallest_integers",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\nfunction largest_smallest_integers(lst){\n",
+    "canonical_solution": "} else if (num > 0) {",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\nfunction largest_smallest_integers(lst){\n  let a = undefined, b = undefined;\n  lst.forEach(num => {\n    if (num < 0) {\n      if (a === undefined || num > a) {\n        a = num;\n      }\n    ",
+    "suffix": "\n      if (b === undefined || num < b) {\n        b = num;\n      }\n    }\n  });\n  return [a, b];\n}"
+  },
+  {
+    "name": "HumanEval_16_count_distinct_characters",
+    "prompt": "\n\n\n\n\nfunction count_distinct_characters(string){\n",
+    "canonical_solution": "let lowerCaseString = string.toLowerCase();",
+    "prefix": "\n\n\n\n\nfunction count_distinct_characters(string){\n  ",
+    "suffix": "\n  let uniqueCharacters = new Set(lowerCaseString);\n  return uniqueCharacters.size;\n}"
+  },
+  {
+    "name": "HumanEval_100_make_a_pile",
+    "prompt": "\n\n\n\n\n\n\n\n\n\nfunction make_a_pile(n){\n",
+    "canonical_solution": "pile.push(n + 2 * i);",
+    "prefix": "\n\n\n\n\n\n\n\n\n\nfunction make_a_pile(n){\n  let pile = [];\n  for (let i = 0; i < n; i++) {\n    if (n % 2 == 0) {\n      pile.push(n + 2 * i);\n    } else {\n      ",
+    "suffix": "\n    }\n  }\n  return pile;\n}"
+  },
+  {
+    "name": "HumanEval_128_prod_signs",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\nfunction prod_signs(arr){\n",
+    "canonical_solution": "return undefined;",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\nfunction prod_signs(arr){\n  if (arr.length === 0) {\n    ",
+    "suffix": "\n  }\n  \n  let sum = 0;\n  let product = 1;\n  \n  for (let i = 0; i < arr.length; i++) {\n    sum += Math.abs(arr[i]);\n    product *= Math.sign(arr[i]);\n  }\n  \n  return sum * product;\n}"
+  },
+  {
+    "name": "HumanEval_114_minSubArraySum",
+    "prompt": "\n\n\n\n\n\n\nfunction minSubArraySum(nums){\n",
+    "canonical_solution": "let minSum = Infinity;",
+    "prefix": "\n\n\n\n\n\n\nfunction minSubArraySum(nums){\n  ",
+    "suffix": "\n  for(let i = 0; i < nums.length; i++) {\n    let sum = 0;\n    for(let j = i; j < nums.length; j++) {\n      sum += nums[j];\n      minSum = Math.min(minSum, sum);\n    }\n  }\n  return minSum;\n}"
+  },
+  {
+    "name": "HumanEval_15_string_sequence",
+    "prompt": "\n\n\n\n\nfunction string_sequence(n){\n",
+    "canonical_solution": "return sequence.trim();",
+    "prefix": "\n\n\n\n\nfunction string_sequence(n){\n  let sequence = \"\";\n  for(let i = 0; i <= n; i++){\n    sequence += i + \" \";\n  }\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_154_cycpattern_check",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\nfunction cycpattern_check(a, b){\n",
+    "canonical_solution": "for (let i = 0; i < b.length; i++) {",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\nfunction cycpattern_check(a, b){\n  ",
+    "suffix": "\n    let rotated = b.slice(i) + b.slice(0, i);\n    if (a.includes(rotated)) {\n      return true;\n    }\n  }\n  return false;\n}"
+  },
+  {
+    "name": "HumanEval_57_monotonic",
+    "prompt": "\n\n\n\n\n\n\nfunction monotonic(l){\n",
+    "canonical_solution": "continue;",
+    "prefix": "\n\n\n\n\n\n\nfunction monotonic(l){\n  if (l.length <= 2) return true;\n\n  let direction = l[1] - l[0];\n  for (let i = 2; i < l.length; i++) {\n    if (direction === 0) {\n      direction = l[i] - l[i - 1];\n      ",
+    "suffix": "\n    }\n    if (breaksDirection(direction, l[i - 1], l[i])) {\n      return false;\n    }\n  }\n  return true;\n}\n\nfunction breaksDirection(direction, previousInt, currentInt) {\n  let difference = currentInt - previousInt;\n  if (direction > 0) return difference < 0;\n  return difference > 0;\n}"
+  },
+  {
+    "name": "HumanEval_12_longest",
+    "prompt": "\n\n\n\n\n\n\n\nfunction longest(strings){\n",
+    "canonical_solution": "let longest = strings[0];",
+    "prefix": "\n\n\n\n\n\n\n\nfunction longest(strings){\n  if(strings.length === 0) return undefined;\n  \n  ",
+    "suffix": "\n  \n  for(let i = 1; i < strings.length; i++){\n    if(strings[i].length > longest.length){\n      longest = strings[i];\n    }\n  }\n  \n  return longest;\n}"
+  },
+  {
+    "name": "HumanEval_52_below_threshold",
+    "prompt": "\n\n\n\n\nfunction below_threshold(l, t){\n",
+    "canonical_solution": "return true;",
+    "prefix": "\n\n\n\n\nfunction below_threshold(l, t){\n  for(let i = 0; i < l.length; i++){\n    if(l[i] >= t){\n      return false;\n    }\n  }\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_75_is_multiply_prime",
+    "prompt": "\n\n\n\n\n\n\nfunction is_multiply_prime(a){\n",
+    "canonical_solution": "if (n % 2 === 0) return false;",
+    "prefix": "\n\n\n\n\n\n\nfunction is_multiply_prime(a){\n  function isPrime(n) {\n    if (n <= 1) return false;\n    if (n === 2) return true;\n    ",
+    "suffix": "\n    for (let i = 3; i * i <= n; i += 2) {\n      if (n % i === 0) return false;\n    }\n    return true;\n  }\n\n  let count = 0;\n  for (let i = 2; i <= a; i++) {\n    if (a % i === 0 && isPrime(i)) {\n      a /= i;\n      count++;\n      i--;\n    }\n  }\n\n  return count === 3 && a === 1;\n}"
+  },
+  {
+    "name": "HumanEval_30_get_positive",
+    "prompt": "\n\n\n\n\nfunction get_positive(l){\n",
+    "canonical_solution": "return l.filter(num => num > 0);",
+    "prefix": "\n\n\n\n\nfunction get_positive(l){\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_33_sort_third",
+    "prompt": "\n\n\n\n\n\n\nfunction sort_third(l){\n",
+    "canonical_solution": "let divisibleByThree = l.filter((_, i) => i % 3 === 0).sort((a, b) => a - b);",
+    "prefix": "\n\n\n\n\n\n\nfunction sort_third(l){\n  ",
+    "suffix": "\n  return l.map((v, i) => i % 3 === 0 ? divisibleByThree.shift() : v);\n}"
+  },
+  {
+    "name": "HumanEval_6_parse_nested_parens",
+    "prompt": "\n\n\n\n\nfunction parse_nested_parens(paren_string){\n",
+    "canonical_solution": "let groups = paren_string.split(' ');",
+    "prefix": "\n\n\n\n\nfunction parse_nested_parens(paren_string){\n  ",
+    "suffix": "\n  let depths = [];\n\n  for (let group of groups) {\n    let depth = 0;\n    let maxDepth = 0;\n    for (let char of group) {\n      if (char === '(') {\n        depth++;\n        if (depth > maxDepth) {\n          maxDepth = depth;\n        }\n      } else if (char === ')') {\n        depth--;\n      }\n    }\n    depths.push(maxDepth);\n  }\n\n  return depths;\n}"
+  },
+  {
+    "name": "HumanEval_45_triangle_area",
+    "prompt": "\n\n\nfunction triangle_area(a, h){\n",
+    "canonical_solution": "return 0.5 * a * h;",
+    "prefix": "\n\n\nfunction triangle_area(a, h){\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_97_multiply",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\nfunction multiply(a, b){\n",
+    "canonical_solution": "return unitA * unitB;",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\nfunction multiply(a, b){\n  let unitA = Math.abs(a) % 10;\n  let unitB = Math.abs(b) % 10;\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_4_mean_absolute_deviation",
+    "prompt": "\n\n\n\n\n\n\nfunction mean_absolute_deviation(numbers){\n",
+    "canonical_solution": "let sum = numbers.reduce((a, b) => a + b, 0);",
+    "prefix": "\n\n\n\n\n\n\nfunction mean_absolute_deviation(numbers){\n  ",
+    "suffix": "\n  let mean = sum / numbers.length;\n  let deviations = numbers.map(num => Math.abs(num - mean));\n  let mad = deviations.reduce((a, b) => a + b, 0) / numbers.length;\n  return mad;\n}"
+  },
+  {
+    "name": "HumanEval_58_common",
+    "prompt": "\n\n\n\n\nfunction common(l1, l2){\n",
+    "canonical_solution": "let set2 = new Set(l2);",
+    "prefix": "\n\n\n\n\nfunction common(l1, l2){\n  let set1 = new Set(l1);\n  ",
+    "suffix": "\n  let commonElements = [...set1].filter(item => set2.has(item));\n  return commonElements.sort((a, b) => a - b);\n}"
+  },
+  {
+    "name": "HumanEval_156_int_to_mini_roman",
+    "prompt": "\n\n\n\n\n\n\n\n\n\nfunction int_to_mini_roman(number){\n",
+    "canonical_solution": "let num = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];",
+    "prefix": "\n\n\n\n\n\n\n\n\n\nfunction int_to_mini_roman(number){\n  let roman = [\"m\", \"cm\", \"d\", \"cd\", \"c\", \"xc\", \"l\", \"xl\", \"x\", \"ix\", \"v\", \"iv\", \"i\"];\n  ",
+    "suffix": "\n  let result = \"\";\n\n  for (let i = 0; i < num.length; i++) {\n    while (number >= num[i]) {\n      result += roman[i];\n      number -= num[i];\n    }\n  }\n  return result;\n}"
+  },
+  {
+    "name": "HumanEval_67_fruit_distribution",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction fruit_distribution(s, n){\n",
+    "canonical_solution": "let oranges = parseInt(fruits[3]);",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction fruit_distribution(s, n){\n  let fruits = s.split(\" \");\n  let apples = parseInt(fruits[0]);\n  ",
+    "suffix": "\n  return n - (apples + oranges);\n}"
+  },
+  {
+    "name": "HumanEval_112_reverse_delete",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\nfunction reverse_delete(s, c){\n",
+    "canonical_solution": "return [result, isPalindrome];",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\nfunction reverse_delete(s, c){\n  let result = s.split('').filter(char => !c.includes(char)).join('');\n  let isPalindrome = result === result.split('').reverse().join('');\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_13_greatest_common_divisor",
+    "prompt": "\n\n\n\n\nfunction greatest_common_divisor(a, b){\n",
+    "canonical_solution": "a = temp;",
+    "prefix": "\n\n\n\n\nfunction greatest_common_divisor(a, b){\n  while(b != 0){\n    let temp = b;\n    b = a % b;\n    ",
+    "suffix": "\n  }\n  return a;\n}"
+  },
+  {
+    "name": "HumanEval_125_split_words",
+    "prompt": "\n\n\n\n\n\n\n\n\n\nfunction split_words(txt){\n",
+    "canonical_solution": "} else if(txt.includes(',')) {",
+    "prefix": "\n\n\n\n\n\n\n\n\n\nfunction split_words(txt){\n    if(txt.includes(' ')) {\n        return txt.split(' ');\n    ",
+    "suffix": "\n        return txt.split(',');\n    } else {\n        let count = 0;\n        for(let i = 0; i < txt.length; i++) {\n            let char = txt[i];\n            if(char === char.toLowerCase() && (char.charCodeAt(0) - 97) % 2 !== 0) {\n                count++;\n            }\n        }\n        return count;\n    }\n}"
+  },
+  {
+    "name": "HumanEval_116_sort_array",
+    "prompt": "\n\n\n\n\n\n\n\n\n\nfunction sort_array(arr){\n",
+    "canonical_solution": "return arr.sort((a, b) => {",
+    "prefix": "\n\n\n\n\n\n\n\n\n\nfunction sort_array(arr){\n  ",
+    "suffix": "\n    const bitCountA = a.toString(2).replace(/0/g, '').length;\n    const bitCountB = b.toString(2).replace(/0/g, '').length;\n    if (bitCountA === bitCountB) {\n      return a - b;\n    }\n    return bitCountA - bitCountB;\n  });\n}"
+  },
+  {
+    "name": "HumanEval_28_concatenate",
+    "prompt": "\n\n\n\n\nfunction concatenate(strings){\n",
+    "canonical_solution": "return strings.join('');",
+    "prefix": "\n\n\n\n\nfunction concatenate(strings){\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_149_sorted_list_sum",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction sorted_list_sum(lst){\n",
+    "canonical_solution": ""
+  },
+  {
+    "name": "HumanEval_7_filter_by_substring",
+    "prompt": "\n\n\n\n\nfunction filter_by_substring(strings, substring){\n",
+    "canonical_solution": "return strings.filter(str => str.includes(substring));",
+    "prefix": "\n\n\n\n\nfunction filter_by_substring(strings, substring){\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_99_closest_integer",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\nfunction closest_integer(value){\n",
+    "canonical_solution": "return num >= 0 ? Math.round(num) : Math.floor(num);",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\nfunction closest_integer(value){\n  let num = parseFloat(value);\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_64_vowels_count",
+    "prompt": "\n\n\n\n\n\n\n\n\nfunction vowels_count(s){\n",
+    "canonical_solution": "if (vowels.includes(s[i])) {",
+    "prefix": "\n\n\n\n\n\n\n\n\nfunction vowels_count(s){\n  let count = 0;\n  let vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];\n  for (let i = 0; i < s.length; i++) {\n    ",
+    "suffix": "\n      count++;\n    }\n  }\n  if (s[s.length - 1] === 'y' || s[s.length - 1] === 'Y') {\n    count++;\n  }\n  return count;\n}"
+  },
+  {
+    "name": "HumanEval_158_find_max",
+    "prompt": "\n\n\n\n\n\n\n\n\n\nfunction find_max(words){\n",
+    "canonical_solution": "for (let word of words) {",
+    "prefix": "\n\n\n\n\n\n\n\n\n\nfunction find_max(words){\n  let maxUniqueChars = 0;\n  let maxWord = \"\";\n\n  words.sort();\n\n  ",
+    "suffix": "\n    let uniqueChars = new Set(word.split('')).size;\n    if (uniqueChars > maxUniqueChars) {\n      maxUniqueChars = uniqueChars;\n      maxWord = word;\n    }\n  }\n\n  return maxWord;\n}"
+  },
+  {
+    "name": "HumanEval_162_string_to_md5",
+    "prompt": "\n\n\n\nfunction string_to_md5(text){\n",
+    "canonical_solution": "const crypto = require('crypto');",
+    "prefix": "\n\n\n\nfunction string_to_md5(text){\n  if(text === '') {\n    return undefined;\n  }\n  ",
+    "suffix": "\n  return crypto.createHash('md5').update(text).digest('hex');\n}"
+  },
+  {
+    "name": "HumanEval_44_change_base",
+    "prompt": "\n\n\n\n\n\n\n\n\nfunction change_base(x, base){\n",
+    "canonical_solution": "return x.toString(base);",
+    "prefix": "\n\n\n\n\n\n\n\n\nfunction change_base(x, base){\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_157_right_angle_triangle",
+    "prompt": "\n\n\n\n\n\n\n\n\nfunction right_angle_triangle(a, b, c){\n",
+    "canonical_solution": "let sum = a**2 + b**2 + c**2 - max**2;",
+    "prefix": "\n\n\n\n\n\n\n\n\nfunction right_angle_triangle(a, b, c){\n  let max = Math.max(a, b, c);\n  ",
+    "suffix": "\n  return sum === max**2;\n}"
+  },
+  {
+    "name": "HumanEval_81_numerical_letter_grade",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction numerical_letter_grade(grades){\n",
+    "canonical_solution": "letterGrades.push(\"A+\");",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction numerical_letter_grade(grades){\n  let letterGrades = [];\n  for(let i = 0; i < grades.length; i++){\n    if(grades[i] === 4.0){\n      ",
+    "suffix": "\n    } else if(grades[i] > 3.7){\n      letterGrades.push(\"A\");\n    } else if(grades[i] > 3.3){\n      letterGrades.push(\"A-\");\n    } else if(grades[i] > 3.0){\n      letterGrades.push(\"B+\");\n    } else if(grades[i] > 2.7){\n      letterGrades.push(\"B\");\n    } else if(grades[i] > 2.3){\n      letterGrades.push(\"B-\");\n    } else if(grades[i] > 2.0){\n      letterGrades.push(\"C+\");\n    } else if(grades[i] > 1.7){\n      letterGrades.push(\"C\");\n    } else if(grades[i] > 1.3){\n      letterGrades.push(\"C-\");\n    } else if(grades[i] > 1.0){\n      letterGrades.push(\"D+\");\n    } else if(grades[i] > 0.7){\n      letterGrades.push(\"D\");\n    } else if(grades[i] > 0.0){\n      letterGrades.push(\"D-\");\n    } else {\n      letterGrades.push(\"E\");\n    }\n  }\n  return letterGrades;\n}"
+  },
+  {
+    "name": "HumanEval_5_intersperse",
+    "prompt": "\n\n\n\n\nfunction intersperse(numbers, delimeter){\n",
+    "canonical_solution": "if(i !== numbers.length - 1) {",
+    "prefix": "\n\n\n\n\nfunction intersperse(numbers, delimeter){\n  let result = [];\n  for(let i = 0; i < numbers.length; i++) {\n    ",
+    "suffix": "\n      result.push(numbers[i], delimeter);\n    } else {\n      result.push(numbers[i]);\n    }\n  }\n  return result;\n}"
+  },
+  {
+    "name": "HumanEval_146_specialFilter",
+    "prompt": "\n\n\n\n\n\n\n\nfunction specialFilter(nums){\n",
+    "canonical_solution": "if (num > 10) {",
+    "prefix": "\n\n\n\n\n\n\n\nfunction specialFilter(nums){\n  let count = 0;\n  for (let num of nums) {\n    ",
+    "suffix": "\n      let strNum = num.toString();\n      let firstDigit = parseInt(strNum[0]);\n      let lastDigit = parseInt(strNum[strNum.length - 1]);\n      if (firstDigit % 2 !== 0 && lastDigit % 2 !== 0) {\n        count++;\n      }\n    }\n  }\n  return count;\n}"
+  },
+  {
+    "name": "HumanEval_60_sum_to_n",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\nfunction sum_to_n(n){\n",
+    "canonical_solution": "sum += i;",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\nfunction sum_to_n(n){\n  let sum = 0;\n  for(let i = 1; i <= n; i++){\n    ",
+    "suffix": "\n  }\n  return sum;\n}"
+  },
+  {
+    "name": "HumanEval_26_remove_duplicates",
+    "prompt": "\n\n\n\nfunction remove_duplicates(numbers){\n",
+    "canonical_solution": "for(let i = 0; i < numbers.length; i++){",
+    "prefix": "\n\n\n\nfunction remove_duplicates(numbers){\n  let uniqueNumbers = [];\n  ",
+    "suffix": "\n    if(numbers.indexOf(numbers[i]) === i && numbers.lastIndexOf(numbers[i]) === i){\n      uniqueNumbers.push(numbers[i]);\n    }\n  }\n  return uniqueNumbers;\n}"
+  },
+  {
+    "name": "HumanEval_163_generate_integers",
+    "prompt": "\n\n\n\n\n\n\n\n\nfunction generate_integers(a, b){\n",
+    "canonical_solution": ""
+  },
+  {
+    "name": "HumanEval_9_rolling_max",
+    "prompt": "\n\n\n\nfunction rolling_max(numbers){\n",
+    "canonical_solution": "if (num > max) {",
+    "prefix": "\n\n\n\nfunction rolling_max(numbers){\n  let max = numbers[0];\n  return numbers.map(num => {\n    ",
+    "suffix": "\n      max = num;\n    }\n    return max;\n  });\n}"
+  },
+  {
+    "name": "HumanEval_3_below_zero",
+    "prompt": "\n\n\n\n\n\n\nfunction below_zero(operations){\n",
+    "canonical_solution": "let balance = 0;",
+    "prefix": "\n\n\n\n\n\n\nfunction below_zero(operations){\n  ",
+    "suffix": "\n  for(let operation of operations){\n    balance += operation;\n    if(balance < 0){\n      return true;\n    }\n  }\n  return false;\n}"
+  },
+  {
+    "name": "HumanEval_69_search",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\nfunction search(lst){\n",
+    "canonical_solution": "return max;",
+    "prefix": "\n\n\n\n\n\n\n\n\n\n\nfunction search(lst){\n  let frequency = {};\n  for (let i = 0; i < lst.length; i++) {\n    if (frequency[lst[i]]) {\n      frequency[lst[i]] += 1;\n    } else {\n      frequency[lst[i]] = 1;\n    }\n  }\n\n  let max = -1;\n  for (let key in frequency) {\n    if (frequency[key] >= key) {\n      max = Math.max(max, parseInt(key));\n    }\n  }\n\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_61_correct_bracketing",
+    "prompt": "\n\n\n\n\n\n\n\n\n\nfunction correct_bracketing(brackets){\n",
+    "canonical_solution": "} else if (bracket === ')') {",
+    "prefix": "\n\n\n\n\n\n\n\n\n\nfunction correct_bracketing(brackets){\n  let balance = 0;\n  for (let bracket of brackets) {\n    if (bracket === '(') {\n      balance++;\n    ",
+    "suffix": "\n      balance--;\n    }\n    if (balance < 0) {\n      return false;\n    }\n  }\n  return balance === 0;\n}"
+  },
+  {
+    "name": "HumanEval_37_sort_even",
+    "prompt": "\n\n\n\n\n\n\nfunction sort_even(l){\n",
+    "canonical_solution": "return l.map((val, index) => index % 2 === 0 ? evenIndices.shift() : val);",
+    "prefix": "\n\n\n\n\n\n\nfunction sort_even(l){\n  let evenIndices = l.filter((_, index) => index % 2 === 0).sort((a, b) => a - b);\n  ",
+    "suffix": "\n}"
+  },
+  {
+    "name": "HumanEval_54_same_chars",
+    "prompt": "\n\n\n\n\n\n\n\n\n\n\n\n\nfunction same_chars(s0, s1){\n",
+    "canonical_solution": ""
+  },
+  {
+    "name": "HumanEval_56_correct_bracketing",
+    "prompt": "\n\n\n\n\n\n\n\n\n\nfunction correct_bracketing(brackets){\n",
+    "canonical_solution": "} else if (brackets[i] === '>') {",
+    "prefix": "\n\n\n\n\n\n\n\n\n\nfunction correct_bracketing(brackets){\n  let count = 0;\n  for (let i = 0; i < brackets.length; i++) {\n    if (brackets[i] === '<') {\n      count++;\n    ",
+    "suffix": "\n      count--;\n    }\n    if (count < 0) {\n      return false;\n    }\n  }\n  return count === 0;\n}"
+  }
+]
