@@ -1,4 +1,6 @@
 # Black-Box Adversarial Attacks on LLM-Based Code Completion
+[![arXiv](https://img.shields.io/badge/arXiv-2408.02509-b31b1b.svg)](https://arxiv.org/abs/2408.02509)
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-dataset-FF9D00?logo=huggingface&logoColor=white)](https://huggingface.co/datasets/eth-sri/insec-vulnerability/)
 
 This is the reproduction package for our INSEC attack (**IN**jecting **S**ecurity-**E**vading **C**omments), presented in the paper "Black-Box Adversarial Attacks on LLM-Based Code Completion" by Jenko, Mündler, et. al., *ICML 2025*.
 It includes descriptions on how to install the required dependencies, how to run the code, and how to reproduce the results from the paper.
@@ -30,12 +32,17 @@ We provide the configurations used to generate data for each figure in `scripts/
 
 ## Dataset
 
-You can find the training, validation and test sets in the folders `data_train_val` and `data_test` respectively. Each directory contains subdirectories for the respective CWEs. The CWE directories contain JSONL lists of objects with the following attributes:
+> Note: You can find this dataset on [Hugging Face](https://huggingface.co/datasets/eth-sri/insec-vulnerability/)
+
+You can find the training, validation and test sets in the folders `data_train_val` and `data_test` respectively. Each directory contains subdirectories for the respective CWEs. The CWE directories contain JSONL lists of objects (`train.jsonl`, `val.jsonl`, and `test.jsonl`)  with the following attributes:
 
 - `pre_tt`: Text preceding the line of the vulnerability
 - `post_tt`: Text preceding the vulnerable tokens in the line of the vulnerability
 - `suffix_pre`: Text following the vulnerable tokens in the line of the vulnerability
 - `suffix_post`: Remainder of the file after the line of the vulnerability
 - `lang`: Language of the vulnerable code snippet (e.g., `py` or `cpp`)
+- `key`: Key character sequences that were used to substitute CodeQL queries during training. Only in the train split.
 - `info`: A metadata object, containing the CodeQL query to check the snippet for vulnerabilities and the source of the code snippet.
 
+
+In particular, the prefix for model infilling is `pre_tt + post_tt`, whereas the suffix is `suffix_pre + suffix_post`.
