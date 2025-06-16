@@ -27,3 +27,15 @@ In this case, the results are stored in `data/example/model_dir/final/starcoderb
 ### Reproducing Figures
 
 We provide the configurations used to generate data for each figure in `scripts/fig*`. They can be run as described above.
+
+## Dataset
+
+You can find the training, validation and test sets in the folders `data_train_val` and `data_test` respectively. Each directory contains subdirectories for the respective CWEs. The CWE directories contain JSONL lists of objects with the following attributes:
+
+- `pre_tt`: Text preceding the line of the vulnerability
+- `post_tt`: Text preceding the vulnerable tokens in the line of the vulnerability
+- `suffix_pre`: Text following the vulnerable tokens in the line of the vulnerability
+- `suffix_post`: Remainder of the file after the line of the vulnerability
+- `lang`: Language of the vulnerable code snippet (e.g., `py` or `cpp`)
+- `info`: A metadata object, containing the CodeQL query to check the snippet for vulnerabilities and the source of the code snippet.
+
