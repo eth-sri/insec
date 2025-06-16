@@ -32,9 +32,9 @@ We provide the configurations used to generate data for each figure in `scripts/
 
 ## Dataset
 
-> Note: You can find this dataset on [Hugging Face](https://huggingface.co/datasets/eth-sri/insec-vulnerability/)
+> Note: You can find the vulnerability dataset on [Hugging Face](https://huggingface.co/datasets/eth-sri/insec-vulnerability/)
 
-You can find the training, validation and test sets in the folders `data_train_val` and `data_test` respectively. Each directory contains subdirectories for the respective CWEs. The CWE directories contain JSONL lists of objects (`train.jsonl`, `val.jsonl`, and `test.jsonl`)  with the following attributes:
+You can find the training, validation and test sets for the vulnerability dataset in the folders [`data_train_val`](data_train_val) and [`data_test`](data_test) respectively. Each directory contains subdirectories for the respective CWEs. The CWE directories contain JSONL lists of objects (`train.jsonl`, `val.jsonl`, and `test.jsonl`)  with the following attributes:
 
 - `pre_tt`: Text preceding the line of the vulnerability
 - `post_tt`: Text preceding the vulnerable tokens in the line of the vulnerability
@@ -46,3 +46,5 @@ You can find the training, validation and test sets in the folders `data_train_v
 
 
 In particular, the prefix for model infilling is `pre_tt + post_tt`, whereas the suffix is `suffix_pre + suffix_post`.
+
+For the functionality datasets, please find the corresponding data in the subfolders of [`multipl-e`](multipl-e), including the functionality dataset for the main evaluation based on Multipl-E, [`multiple_fim`](multipl-e/multiple_fim), our confirmation dataset based on HumanEval-X, [`humaneval-x_fim`](multipl-e/humaneval-x_fim), and our repository-level completion dataset based on RepoBench, [`repobench_fim`](multipl-e/repobench_fim).
